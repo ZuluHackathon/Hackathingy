@@ -20,7 +20,7 @@
 const { app } = require('../index/app');
 const { Router } = require('express');
 
-// const BadgeRouter = Router();
+const BadgeRouter = Router();
 
 /*
   べべべべべべべべべべ
@@ -28,7 +28,7 @@ const { Router } = require('express');
   べべべべべべべべべべ
 */
 
-// const Badge = require('../../db/schemas/badge');
+const Badge = require('../../db/schemas/badge');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*
@@ -42,5 +42,5 @@ const { Router } = require('express');
 // });
 
 module.exports = {
-  /* UserRouter */
+  BadgeRouter
 };
