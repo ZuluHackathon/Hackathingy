@@ -16,19 +16,43 @@ const serveHome = (req, res) => {
     }
   });
 };
+
 /*
   べべべべべべべべべべべ
   べべ middleware べべ
   べべべべべべべべべべべ
 */
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(DIST_DIR));
+
+/*
+  べべべべべべべべべ
+  べべ routers べべ
+  べべべべべべべべべ
+*/
+
+const { UserRouter } = require('./routes/users');
+const { FridgeRouter } = require('./routes/fridges');
+const { BadgeRouter } = require('./routes/badges');
+
+/*
+  べべべべべべべべべべべ
+  べべ use routes べべ
+  べべべべべべべべべべべ
+*/
+
+app.use('/users', UserRouter);
+app.use('/fridges', FridgeRouter);
+app.use('/badges', BadgeRouter);
+
 /*
   べべべべべべべべべべ
   べべ endpoints べべ
   べべべべべべべべべべ
 */
+
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(DIST_DIR, 'index.html'));
 });

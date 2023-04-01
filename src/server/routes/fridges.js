@@ -17,10 +17,10 @@
   べべべべべべべべべべべべ
 */
 
-// const { app } = require('../index/app');
-// const { Router } = require('express');
+const { app } = require('../index/app');
+const { Router } = require('express');
 
-// const UserRouter = Router();
+const FridgeRouter = Router();
 
 /*
   べべべべべべべべべべ
@@ -28,7 +28,7 @@
   べべべべべべべべべべ
 */
 
-// const User = require('../../db/schemas/user');
+const Fridge = require('../../db/schemas/user');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*
@@ -37,10 +37,10 @@
   べべべべべべべべべべ
 */
 
-// UserRouter.get('/users/...', (req, res) => {
+// FridgeRouter.get('/users/...', (req, res) => {
 //   /* ... */
 // });
 
 module.exports = {
-  /* UserRouter */
+  FridgeRouter
 };

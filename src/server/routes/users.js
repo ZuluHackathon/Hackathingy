@@ -17,10 +17,10 @@
   べべべべべべべべべべべべ
 */
 
-// const { app } = require('../index/app');
-// const { Router } = require('express');
+const { app } = require('../index/app');
+const { Router } = require('express');
 
-// const UserRouter = Router();
+const UserRouter = Router();
 
 /*
   べべべべべべべべべべ
@@ -28,7 +28,7 @@
   べべべべべべべべべべ
 */
 
-// const User = require('../../db/schemas/user');
+const User = require('../../db/schemas/user');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*
@@ -42,5 +42,5 @@
 // });
 
 module.exports = {
-  /* UserRouter */
+  UserRouter
 };
