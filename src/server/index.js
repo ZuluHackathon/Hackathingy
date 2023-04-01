@@ -7,6 +7,8 @@ const app = express();
 const PORT = 9090;
 const DIST_DIR = path.resolve(__dirname, '..', '..', 'dist');
 
+const db = require('../db/index');
+
 const serveHome = (req, res) => {
   res.sendFile(path.resolve(DIST_DIR, 'index.html'), (err) => {
     if (err) {

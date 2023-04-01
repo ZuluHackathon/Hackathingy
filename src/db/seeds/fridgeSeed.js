@@ -6,3 +6,5 @@ const seed = [
     inventory: ['3 pre-made meals'],
   }
 ]
+
+module.exports = seed;

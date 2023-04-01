@@ -5,3 +5,5 @@ const seed = [
     image_url: 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/3415302/picnic-basket-clipart-xl.png'
   }
 ]
+
+module.exports = seed;
