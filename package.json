@@ -1,0 +1,11 @@
+{
+  "name": "fridgefollower",
+  "version": "1.0.0",
+  "description": "Get/Send text msg updates on stocking NOLA Community Fridges",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Team Zulu Hackathon",
+  "license": "ISC"
+}
