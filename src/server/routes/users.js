@@ -17,7 +17,7 @@
   べべべべべべべべべべべべ
 */
 
-const { app } = require('../index/app');
+const { app } = require('../index');
 const { Router } = require('express');
 
 const UserRouter = Router();
