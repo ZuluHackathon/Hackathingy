@@ -1,10 +1,14 @@
 module.exports = {
   presets: [
+    "@babel/preset-env",
+    // {
+    //   "modules": true // ⇠ maybe remove ?
+    // },
     [
       "@babel/preset-react",
       {
-        development: process.env.BABEL_ENV === "development",
-      },
+        "runtime": "automatic"
+      }
     ],
   ],
 };

@@ -11,6 +11,7 @@ const stylesHandler = 'style-loader';
 const config = {
     entry: './src/client/Index.jsx',
     output: {
+        chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     resolve: {
@@ -28,7 +29,8 @@ const config = {
         rules: [
             {
                 test: /\.(js|jsx)$/i,
-                loader: 'babel-loader',
+                exclude: /node_modules/,
+                use: {loader: 'babel-loader'}
             },
             {
                 test: /\.css$/i,
