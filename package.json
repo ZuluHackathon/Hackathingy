@@ -8,7 +8,6 @@
     "build": "webpack --watch",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
     "transpile": "babel ./server --out-dir dist-server"
   },
   "author": "Team Zulu Hackathon",
