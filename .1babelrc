@@ -4,8 +4,9 @@
     [
       "@babel/preset-env",
       {
-        "modules": false
-      }
+        "modules": false // ⇠ maybe remove ?
+      },
+      "@babel/preset-react"
     ]
   ]
 }

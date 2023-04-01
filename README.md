@@ -1,2 +1,11 @@
+```
+npm run build
+```
 
-README.empty
+or
+
+```
+yarn build
+```
+
+to bundle your application
