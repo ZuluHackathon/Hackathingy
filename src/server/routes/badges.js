@@ -17,10 +17,10 @@
   べべべべべべべべべべべべ
 */
 
-// const { app } = require('../index/app');
-// const { Router } = require('express');
+const { app } = require('../index/app');
+const { Router } = require('express');
 
-// const UserRouter = Router();
+// const BadgeRouter = Router();
 
 /*
   べべべべべべべべべべ
@@ -28,7 +28,7 @@
   べべべべべべべべべべ
 */
 
-// const User = require('../../db/schemas/user');
+// const Badge = require('../../db/schemas/badge');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*
@@ -37,7 +37,7 @@
   べべべべべべべべべべ
 */
 
-// UserRouter.get('/users/...', (req, res) => {
+// BadgeRouter.get('/users/...', (req, res) => {
 //   /* ... */
 // });
 
