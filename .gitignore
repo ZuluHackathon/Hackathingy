@@ -1,0 +1,10 @@
+#Files to not be tracked by GH
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+
+#build files
+dist
