@@ -1,5 +1,5 @@
 // Define a GeoJSON data source for the community fridges
-const fridgeData = {
+export const fridgeData = {
   type: "FeatureCollection",
   features: [
     {
@@ -18,7 +18,7 @@ const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.970331029937547, -90.07604887322762],
+        coordinates: [-90.07604887322762, 29.970331029937547],
       },
     },
     {
@@ -31,7 +31,7 @@ const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.968005076403607, -90.04153258672021],
+        coordinates: [-90.04153258672021, 29.968005076403607],
       },
     },
     {
@@ -232,6 +232,6 @@ const fridgeData = {
   ],
 };
 
-module.exports = {
-  fridgeData,
-};
+// module.exports = {
+//   fridgeData,
+// };

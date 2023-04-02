@@ -31,11 +31,12 @@ const Map = () => {
         type: "symbol",
         source: "fridges",
         layout: {
-          "icon-image": "grocery-15",
+          "icon-image": "grocery",
           "icon-size": 1.5,
           "icon-allow-overlap": true,
         },
       });
+      setMapObj(map);
     });
   }, []);
 
