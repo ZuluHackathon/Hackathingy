@@ -1,5 +1,5 @@
-import { DataTypes } from 'sequelize'; // import Model
-import { db } from '../index';
+const { DataTypes } = require ('sequelize'); // import Model
+const { db } = require ('../index');
 
 const User = db.define('user', {
   name: DataTypes.STRING,
@@ -7,4 +7,4 @@ const User = db.define('user', {
   badges: DataTypes.ARRAY(DataTypes.INTEGER),
   fridges: DataTypes.ARRAY(DataTypes.INTEGER),
 })
-export default User
+module.exports = User
