@@ -44,7 +44,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.969730896168194, -90.05960165973512],
+        coordinates: [-90.05960165973512, 29.969730896168194],
       },
     },
     {
@@ -57,7 +57,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.970333966501272, -90.06485180206344],
+        coordinates: [-90.06485180206344, 29.970333966501272],
       },
     },
     {
@@ -70,7 +70,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.964104204064505, -90.0055006308994],
+        coordinates: [-90.0055006308994, 29.964104204064505],
       },
     },
     {
@@ -83,7 +83,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.973209891285293, -90.03397831555591],
+        coordinates: [-90.03397831555591, 29.973209891285293],
       },
     },
     {
@@ -96,7 +96,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.970583794971102, -90.02190713089927],
+        coordinates: [-90.02190713089927, 29.970583794971102],
       },
     },
     {
@@ -109,7 +109,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.933594042196734, -90.08763915973569],
+        coordinates: [-90.08763915973569, 29.933594042196734],
       },
     },
     {
@@ -122,7 +122,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.937483730631698, -90.08352410206399],
+        coordinates: [-90.08352410206399, 29.937483730631698],
       },
     },
     {
@@ -135,7 +135,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.977780978406116, -90.05609583089917],
+        coordinates: [-90.05609583089917, 29.977780978406116],
       },
     },
     {
@@ -148,7 +148,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.980390167793352, -90.05248395973489],
+        coordinates: [-90.05248395973489, 29.980390167793352],
       },
     },
     {
@@ -161,7 +161,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.978924970124506, -90.07497154439169],
+        coordinates: [-90.07497154439169, 29.978924970124506],
       },
     },
     {
@@ -174,7 +174,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.967669804578314, -90.08413810206349],
+        coordinates: [-90.08413810206349, 29.967669804578314],
       },
     },
     {
@@ -187,7 +187,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.952840307480763, -90.03907904439208],
+        coordinates: [-90.03907904439208, 29.952840307480763],
       },
     },
     {
@@ -200,7 +200,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.9698540959953, -90.1124822308993],
+        coordinates: [-90.1124822308993, 29.9698540959953],
       },
     },
     {
@@ -213,7 +213,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.912354077322124, -90.14440855973604],
+        coordinates: [-90.14440855973604, 29.912354077322124],
       },
     },
     {
@@ -226,7 +226,7 @@ export const fridgeData = {
       },
       geometry: {
         type: "Point",
-        coordinates: [29.977167434513447, -90.08761263089916],
+        coordinates: [-90.08761263089916, 29.977167434513447],
       },
     },
   ],
