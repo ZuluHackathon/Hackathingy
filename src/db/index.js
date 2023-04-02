@@ -57,7 +57,59 @@ const Fridge = db.define('fridge', {
   inventory: DataTypes.ARRAY(DataTypes.STRING)
 })
 
+const userSeeder = async (userArr) => {
+  for (let i = 0; i < userArr.length; i++) {
+    await User.findOrCreate(
+      {
+        where: {
+          email: userArr[i].email,
+          name: userArr[i].name,
+          phone: userArr[i].phone,
+          badges: userArr[i].badges,
+          fridges: userArr[i].fridges
+        }
+      })
+      .then((success) =>
+        console.log('User.findOrCreate successful!'))
+      .catch((err) =>
+        console.error('ERROR: User.findOrCreate failed!'));
+  }
+};
 
+const fridgeSeeder = async (fridgeArr) => {
+  for (let i = 0; i < fridgeArr.length; i++) {
+    await Fridge.findOrCreate(
+      {
+        where: {
+          name: fridgeArr[i].name,
+          address: fridgeArr[i].address,
+          status: fridgeArr[i].status,
+          inventory: fridgeArr[i].inventory
+        }
+      })
+      .then((success) =>
+        console.log('User.findOrCreate successful!'))
+      .catch((err) =>
+        console.error('ERROR: User.findOrCreate failed!'));
+  }
+};
+
+const BadgeSeeder = async (badgeArr) => {
+  for (let i = 0; i < badgeArr.length; i++) {
+    await User.findOrCreate(
+      {
+        where: {
+          name: badgeArr[i].name,
+          description: badgeArr[i].description,
+          image_url: badgeArr[i].image_url
+        }
+      })
+      .then((success) =>
+        console.log('User.findOrCreate successful!'))
+      .catch((err) =>
+        console.error('ERROR: User.findOrCreate failed!'));
+  }
+};
 
 // *******************
 // *** MODEL SYNCS ***
@@ -72,10 +124,12 @@ const modelSync = async (dropTables = false) => {
   await User.sync(options);
   // ↑↑↑ Tables Synced ↑↑↑
   // ↓↓↓  Seed Tables  ↓↓↓
-  // await fridgeSeeder(fridgeSeed);
-  // await badgeSeeder(badgeSeed);
-  // await userSeeder(userSeed);
+  await fridgeSeeder(fridgeSeed);
+  await badgeSeeder(badgeSeed);
+  await userSeeder(userSeed);
 };
+
+
 
 // <-- WILL DROP ALL TABLES -->
 modelSync(true);
