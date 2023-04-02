@@ -2,13 +2,6 @@ const env = require('dotenv/config');
 const postgresql = require('postgresql');
 const Sequelize = require('sequelize');
 const { DataTypes } = require('sequelize'); // import Model
-// *************************
-// *** Seeder Fn Imports ***
-// *************************
-
-const userSeeder = require('./seeders/userSeeder.js');
-const badgeSeeder = require('./seeders/badgeSeeder.js');
-const fridgeSeeder = require('./seeders/fridgeSeeder');
 
 // BEGIN DATABASE SEED DATA IMPORTS //
 const userSeed = require('./seeds/userSeed');
@@ -36,6 +29,7 @@ db.authenticate()
 
 // const User = require('./schemas/user');
 const User = db.define('user', {
+  email: DataTypes.STRING,
   name: DataTypes.STRING,
   phone: DataTypes.INTEGER,
   badges: DataTypes.ARRAY(DataTypes.INTEGER),
@@ -88,15 +82,15 @@ const fridgeSeeder = async (fridgeArr) => {
         }
       })
       .then((success) =>
-        console.log('User.findOrCreate successful!'))
+        console.log('Fridge.findOrCreate successful!'))
       .catch((err) =>
-        console.error('ERROR: User.findOrCreate failed!'));
+        console.error('ERROR: Fridge.findOrCreate failed!'));
   }
 };
 
-const BadgeSeeder = async (badgeArr) => {
+const badgeSeeder = async (badgeArr) => {
   for (let i = 0; i < badgeArr.length; i++) {
-    await User.findOrCreate(
+    await Badge.findOrCreate(
       {
         where: {
           name: badgeArr[i].name,
@@ -105,9 +99,9 @@ const BadgeSeeder = async (badgeArr) => {
         }
       })
       .then((success) =>
-        console.log('User.findOrCreate successful!'))
+        console.log('Badge.findOrCreate successful!'))
       .catch((err) =>
-        console.error('ERROR: User.findOrCreate failed!'));
+        console.error('ERROR: Badge.findOrCreate failed!'));
   }
 };
 
