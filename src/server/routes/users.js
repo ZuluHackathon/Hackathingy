@@ -17,8 +17,8 @@
   べべべべべべべべべべべべ
 */
 
-const { app } = require('../index');
-const { Router } = require('express');
+//const { app } = require('../index');
+const { Router } = require("express");
 
 const UserRouter = Router();
 
@@ -41,5 +41,5 @@ const UserRouter = Router();
 // });
 
 module.exports = {
-  UserRouter
+  UserRouter,
 };

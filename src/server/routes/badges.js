@@ -17,8 +17,8 @@
   べべべべべべべべべべべべ
 */
 
-const { app } = require('../index');
-const { Router } = require('express');
+//const { app } = require('../index');
+const { Router } = require("express");
 
 const BadgeRouter = Router();
 
@@ -41,5 +41,5 @@ const BadgeRouter = Router();
 // });
 
 module.exports = {
-  BadgeRouter
+  BadgeRouter,
 };
