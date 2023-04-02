@@ -27,6 +27,4 @@ const Map = () => {
 
 };
 
-module.exports = {
-  Map
-};
+export default Map;
