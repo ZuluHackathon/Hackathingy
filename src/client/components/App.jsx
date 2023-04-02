@@ -2,8 +2,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Map from './Map/Map.jsx';
 import Contact from './Contact.jsx';
 
-import React from 'react';
-import axios from 'axios';
 
 export const App = () => {
   return (
@@ -15,8 +13,9 @@ export const App = () => {
 
         {/* <Route path='/about' element={<About />} /> */}
         {/* <Route path='/profile' element={<Profile />} /> */}
-        <Route path='/' element={<Navigate to='/' replace />} />
+        <Route path="/" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
+  );
   );
 };
