@@ -1,7 +1,8 @@
-const env = require('dotenv/config');
-const postgresql = require('postgresql');
-const Sequelize = require('sequelize');
-const { DataTypes } = require('sequelize'); // import Model
+/* eslint-disable no-unused-vars */
+const env = require("dotenv/config");
+const postgresql = require("postgresql");
+const Sequelize = require("sequelize");
+const { DataTypes } = require("sequelize"); // import Model
 
 // BEGIN DATABASE SEED DATA IMPORTS //
 const badgeSeed = require("./seeds/badgeSeed");
@@ -14,6 +15,7 @@ const userSeed = require("./seeds/userSeed");
 // *********************
 
 const { DB_USER, DATABASE_URL, DB, DBPW, DB_PORT } = process.env;
+
 //uncomment second sequelize call for using external db
 const db = new Sequelize(DB, DB_USER, DBPW, {
   host: DATABASE_URL,
@@ -28,7 +30,7 @@ db.authenticate()
   .catch((error) => console.error("Unable to connect to the database:", error));
 
 // const User = require('./schemas/user');
-const User = db.define('user', {
+const User = db.define("user", {
   email: DataTypes.STRING,
   name: DataTypes.STRING,
   phone: DataTypes.INTEGER,
@@ -48,60 +50,51 @@ const Fridge = db.define("fridge", {
   name: DataTypes.STRING,
   address: DataTypes.STRING,
   status: DataTypes.STRING,
-  inventory: DataTypes.ARRAY(DataTypes.STRING)
-})
+  inventory: DataTypes.ARRAY(DataTypes.STRING),
+});
 
 const userSeeder = async (userArr) => {
   for (let i = 0; i < userArr.length; i++) {
-    await User.findOrCreate(
-      {
-        where: {
-          email: userArr[i].email,
-          name: userArr[i].name,
-          phone: userArr[i].phone,
-          badges: userArr[i].badges,
-          fridges: userArr[i].fridges
-        }
-      })
-      .then((success) =>
-        console.log('User.findOrCreate successful!'))
-      .catch((err) =>
-        console.error('ERROR: User.findOrCreate failed!'));
+    await User.findOrCreate({
+      where: {
+        email: userArr[i].email,
+        name: userArr[i].name,
+        phone: userArr[i].phone,
+        badges: userArr[i].badges,
+        fridges: userArr[i].fridges,
+      },
+    })
+      .then((success) => console.log("User.findOrCreate successful!"))
+      .catch((err) => console.error("ERROR: User.findOrCreate failed!"));
   }
 };
 
 const fridgeSeeder = async (fridgeArr) => {
   for (let i = 0; i < fridgeArr.length; i++) {
-    await Fridge.findOrCreate(
-      {
-        where: {
-          name: fridgeArr[i].name,
-          address: fridgeArr[i].address,
-          status: fridgeArr[i].status,
-          inventory: fridgeArr[i].inventory
-        }
-      })
-      .then((success) =>
-        console.log('Fridge.findOrCreate successful!'))
-      .catch((err) =>
-        console.error('ERROR: Fridge.findOrCreate failed!'));
+    await Fridge.findOrCreate({
+      where: {
+        name: fridgeArr[i].name,
+        address: fridgeArr[i].address,
+        status: fridgeArr[i].status,
+        inventory: fridgeArr[i].inventory,
+      },
+    })
+      .then((success) => console.log("Fridge.findOrCreate successful!"))
+      .catch((err) => console.error("ERROR: Fridge.findOrCreate failed!"));
   }
 };
 
 const badgeSeeder = async (badgeArr) => {
   for (let i = 0; i < badgeArr.length; i++) {
-    await Badge.findOrCreate(
-      {
-        where: {
-          name: badgeArr[i].name,
-          description: badgeArr[i].description,
-          image_url: badgeArr[i].image_url
-        }
-      })
-      .then((success) =>
-        console.log('Badge.findOrCreate successful!'))
-      .catch((err) =>
-        console.error('ERROR: Badge.findOrCreate failed!'));
+    await Badge.findOrCreate({
+      where: {
+        name: badgeArr[i].name,
+        description: badgeArr[i].description,
+        image_url: badgeArr[i].image_url,
+      },
+    })
+      .then((success) => console.log("Badge.findOrCreate successful!"))
+      .catch((err) => console.error("ERROR: Badge.findOrCreate failed!"));
   }
 };
 
@@ -122,8 +115,6 @@ const modelSync = async (dropTables = false) => {
   await badgeSeeder(badgeSeed);
   await userSeeder(userSeed);
 };
-
-
 
 // <-- WILL DROP ALL TABLES -->
 modelSync(true);
