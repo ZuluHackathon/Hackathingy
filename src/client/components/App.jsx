@@ -5,6 +5,14 @@ import axios from 'axios';
 
 export const App = () => {
   return (
-    <h1>Colin wuz X</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/locations' element={<Locations />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='*' element={<Navigate to='/' replace />} />
+        </Routes>
+    </BrowserRouter>
   )
 };

@@ -17,7 +17,7 @@
   べべべべべべべべべべべべ
 */
 
-const { app } = require('../index/app');
+const { app } = require('../index');
 const { Router } = require('express');
 
 const BadgeRouter = Router();
@@ -28,7 +28,6 @@ const BadgeRouter = Router();
   べべべべべべべべべべ
 */
 
-const Badge = require('../../db/schemas/badge');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*

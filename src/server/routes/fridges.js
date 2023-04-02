@@ -17,7 +17,7 @@
   べべべべべべべべべべべべ
 */
 
-const { app } = require('../index/app');
+const { app } = require('../index');
 const { Router } = require('express');
 
 const FridgeRouter = Router();
@@ -28,7 +28,6 @@ const FridgeRouter = Router();
   べべべべべべべべべべ
 */
 
-const Fridge = require('../../db/schemas/user');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*
