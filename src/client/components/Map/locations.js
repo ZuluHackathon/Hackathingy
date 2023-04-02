@@ -4,9 +4,15 @@ const fridgeData = {
   features: [
     {
       type: "Feature",
+      crs: {
+        type: "name",
+        properties: {
+          name: "urn:ogc:def:crs:OGC:1.3:CRS84",
+        },
+      },
       properties: {
         name: "Community Fridge 1",
-        address: "1014 N Miro St, New Orleans, Louisiana, 70119",
+        // address: "1014 N Miro St, New Orleans, Louisiana, 70119",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -19,7 +25,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 2",
-        address: "1126 Piety St, New Orleans, Louisiana, 70117",
+        // address: "1126 Piety St, New Orleans, Louisiana, 70117",
         description:
           "This is another community fridge that provides free food for those in need.",
       },
@@ -32,7 +38,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 3",
-        address: "1206 Touro St, New Orleans, Louisiana, 70116",
+        // address: "1206 Touro St, New Orleans, Louisiana, 70116",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -71,7 +77,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 6",
-        address: "1801 Alvar St, New Orleans, Louisiana, 70117",
+        // address: "1801 Alvar St, New Orleans, Louisiana, 70117",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -84,7 +90,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 7",
-        address: "1804 Deslonde St, New Orleans, Louisiana, 70117",
+        // address: "1804 Deslonde St, New Orleans, Louisiana, 70117",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -97,7 +103,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 8",
-        address: "1823 Washington Ave, New Orleans, Louisiana, 70113",
+        // address: "1823 Washington Ave, New Orleans, Louisiana, 70113",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -110,7 +116,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 9",
-        address: "1924 Jackson Ave, New Orleans, Louisiana, 70113",
+        // address: "1924 Jackson Ave, New Orleans, Louisiana, 70113",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -123,7 +129,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 10",
-        address: "1941 Marigny St, New Orleans, Louisiana, 70117",
+        // address: "1941 Marigny St, New Orleans, Louisiana, 70117",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -136,7 +142,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 11",
-        address: "2425 N Miro St New Orleans Louisiana 70117",
+        // address: "2425 N Miro St New Orleans Louisiana 70117",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -149,7 +155,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 12",
-        address: "2528 Lapeyrouse St New Orleans Louisiana 70119",
+        // address: "2528 Lapeyrouse St New Orleans Louisiana 70119",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -162,7 +168,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 13",
-        address: "2623 Conti St, New Orleans, Louisiana, 70119",
+        // address: "2623 Conti St, New Orleans, Louisiana, 70119",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -175,7 +181,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 14",
-        address: "300 Wagner St, New Orleans, Louisiana, 70114",
+        // address: "300 Wagner St, New Orleans, Louisiana, 70114",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -188,7 +194,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 15",
-        address: "3908 Joliet St New Orleans Louisiana 70118",
+        // address: "3908 Joliet St New Orleans Louisiana 70118",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -201,7 +207,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 16",
-        address: "401 Sala Ave, Westwego, Louisiana, 70094",
+        // address: "401 Sala Ave, Westwego, Louisiana, 70094",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
@@ -214,7 +220,7 @@ const fridgeData = {
       type: "Feature",
       properties: {
         name: "Community Fridge 17",
-        address: "923 Hagan Ave, New Orleans, Louisiana, 70119",
+        // address: "923 Hagan Ave, New Orleans, Louisiana, 70119",
         description:
           "This is a community fridge that provides free food for those in need.",
       },
