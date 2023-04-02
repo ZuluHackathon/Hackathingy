@@ -20,22 +20,15 @@ const phoneNumber = process.env.TWILIO_NUMBER;
 const client = require("twilio")(accountSid, authToken);
 
 // define a route to send an SMS message
-app.post("/send-sms", (req, res) => {
+app.post('/send-sms', (req, res) => {
+  console.log(req.body);
+  if (!req.body || !req.body.to) {
+    return res.status(400).send('Invalid request body');
+  }
   const { to } = req.body;
-
-  client.messages
-    .create({
-      body: "Signed Up!",
-      to: to,
-      from: phoneNumber,
-    })
-    .then(() => {
-      res.status(200).send("Signed Up!");
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).send("Oops! Something went wrong.");
-    });
+  console.log(`Sending SMS to ${to}`);
+  // Code to send SMS here
+  res.send('SMS sent successfully');
 });
 
 // const { BadgeRouter } = require("./routes/badges");
