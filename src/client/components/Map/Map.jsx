@@ -21,19 +21,7 @@ const Map = () => {
       // Add your code for adding fridgeData to the map here
       map.addSource('fridges', {
         type: 'geojson',
-        data: {
-          type: "Feature",
-          properties: {
-            name: "Community Fridge 1",
-            address: "1014 N Miro St, New Orleans, Louisiana, 70119",
-            description:
-              "This is a community fridge that provides free food for those in need.",
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [29.970331029937547, -90.07604887322762],
-          },
-        },
+        data: fridgeData,
       });
 
       map.addLayer({

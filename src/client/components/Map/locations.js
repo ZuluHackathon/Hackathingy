@@ -1,68 +1,3 @@
-// // Define a GeoJSON data source for the community fridges
-const fridgeData = {
-  type: "FeatureCollection",
-  features: [
-    {
-      type: "Feature",
-      properties: {
-        name: "Community Fridge 1",
-        address: "1014 N Miro St, New Orleans, Louisiana, 70119",
-        description:
-          "This is a community fridge that provides free food for those in need.",
-      },
-      geometry: {
-        type: "Point",
-        coordinates: [29.970331029937547, -90.07604887322762],
-      },
-    },
-    {
-      type: "Feature",
-      properties: {
-        name: "Community Fridge 2",
-        address: "1126 Piety St, New Orleans, Louisiana, 70117",
-        description:
-          "This is another community fridge that provides free food for those in need.",
-      },
-      geometry: {
-        type: "Point",
-        coordinates: [29.968005076403607, -90.04153258672021],
-      },
-    },
-    {
-      type: "Feature",
-      properties: {
-        name: "Community Fridge 3",
-        address: "1206 Touro St, New Orleans, Louisiana, 70116",
-        description:
-          "This is a community fridge that provides free food for those in need.",
-      },
-      geometry: {
-        type: "Point",
-        coordinates: [29.969730896168194, -90.05960165973512],
-      },
-    },
-    {
-      type: "Feature",
-      properties: {
-        name: "Community Fridge 4",
-        address: "1522 N Villere St New Orleans Louisiana 70116",
-        description:
-          "This is a community fridge that provides free food for those in need.",
-      },
-      geometry: {
-        type: "Point",
-        coordinates: [29.970333966501272, -90.06485180206344],
-      },
-    },
-  ],
-};
-
-module.exports = {
-  fridgeData,
-};
-
-/*
-
 // Define a GeoJSON data source for the community fridges
 const fridgeData = {
   type: "FeatureCollection",
@@ -294,4 +229,3 @@ const fridgeData = {
 module.exports = {
   fridgeData,
 };
- */
