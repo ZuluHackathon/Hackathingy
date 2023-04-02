@@ -58,6 +58,7 @@
     "react-dom": "^18.2.0",
     "react-router": "^6.10.0",
     "react-router-dom": "^6.10.0",
-    "sequelize": "^6.30.0"
+    "sequelize": "^6.30.0",
+    "twilio": "^4.9.0"
   }
 }
