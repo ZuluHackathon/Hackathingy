@@ -1,14 +1,8 @@
-const env = require("dotenv/config");
-const postgresql = require("postgresql");
-const Sequelize = require("sequelize");
-const { DataTypes } = require("sequelize"); // import Model
+const env = require('dotenv/config');
+const postgresql = require('postgresql');
+const Sequelize = require('sequelize');
+const { DataTypes } = require('sequelize'); // import Model
 
-// *************************
-// *** Seeder Fn Imports ***
-// *************************
-const badgeSeeder = require("./seeders/badgeSeeder.js");
-const fridgeSeeder = require("./seeders/fridgeSeeder");
-const userSeeder = require("./seeders/userSeeder.js");
 // BEGIN DATABASE SEED DATA IMPORTS //
 const badgeSeed = require("./seeds/badgeSeed");
 const fridgeSeed = require("./seeds/fridgeSeed");
@@ -34,7 +28,8 @@ db.authenticate()
   .catch((error) => console.error("Unable to connect to the database:", error));
 
 // const User = require('./schemas/user');
-const User = db.define("user", {
+const User = db.define('user', {
+  email: DataTypes.STRING,
   name: DataTypes.STRING,
   phone: DataTypes.INTEGER,
   badges: DataTypes.ARRAY(DataTypes.INTEGER),
@@ -53,8 +48,62 @@ const Fridge = db.define("fridge", {
   name: DataTypes.STRING,
   address: DataTypes.STRING,
   status: DataTypes.STRING,
-  inventory: DataTypes.ARRAY(DataTypes.STRING),
-});
+  inventory: DataTypes.ARRAY(DataTypes.STRING)
+})
+
+const userSeeder = async (userArr) => {
+  for (let i = 0; i < userArr.length; i++) {
+    await User.findOrCreate(
+      {
+        where: {
+          email: userArr[i].email,
+          name: userArr[i].name,
+          phone: userArr[i].phone,
+          badges: userArr[i].badges,
+          fridges: userArr[i].fridges
+        }
+      })
+      .then((success) =>
+        console.log('User.findOrCreate successful!'))
+      .catch((err) =>
+        console.error('ERROR: User.findOrCreate failed!'));
+  }
+};
+
+const fridgeSeeder = async (fridgeArr) => {
+  for (let i = 0; i < fridgeArr.length; i++) {
+    await Fridge.findOrCreate(
+      {
+        where: {
+          name: fridgeArr[i].name,
+          address: fridgeArr[i].address,
+          status: fridgeArr[i].status,
+          inventory: fridgeArr[i].inventory
+        }
+      })
+      .then((success) =>
+        console.log('Fridge.findOrCreate successful!'))
+      .catch((err) =>
+        console.error('ERROR: Fridge.findOrCreate failed!'));
+  }
+};
+
+const badgeSeeder = async (badgeArr) => {
+  for (let i = 0; i < badgeArr.length; i++) {
+    await Badge.findOrCreate(
+      {
+        where: {
+          name: badgeArr[i].name,
+          description: badgeArr[i].description,
+          image_url: badgeArr[i].image_url
+        }
+      })
+      .then((success) =>
+        console.log('Badge.findOrCreate successful!'))
+      .catch((err) =>
+        console.error('ERROR: Badge.findOrCreate failed!'));
+  }
+};
 
 // *******************
 // *** MODEL SYNCS ***
@@ -69,10 +118,12 @@ const modelSync = async (dropTables = false) => {
   await User.sync(options);
   // ↑↑↑ Tables Synced ↑↑↑
   // ↓↓↓  Seed Tables  ↓↓↓
-  // await fridgeSeeder(fridgeSeed);
-  // await badgeSeeder(badgeSeed);
-  // await userSeeder(userSeed);
+  await fridgeSeeder(fridgeSeed);
+  await badgeSeeder(badgeSeed);
+  await userSeeder(userSeed);
 };
+
+
 
 // <-- WILL DROP ALL TABLES -->
 modelSync(true);
@@ -80,4 +131,4 @@ modelSync(true);
 // <-- WON'T DROP TABLES -->
 //modelSync();
 
-module.exports = db;
+module.exports = { db, User, Fridge, Badge };
