@@ -32,10 +32,10 @@ const config = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    options: { /* ⇠ may need for map box */
-                        presets: ['my-custom-babel-preset'],
-                        ignore: [ './node_modules/mapbox-gl/dist/mapbox-gl.js' ]
-                    }
+                    // options: { /* ⇠ may need for map box */
+                    //     presets: ['my-custom-babel-preset'],
+                    //     ignore: [ './node_modules/mapbox-gl/dist/mapbox-gl.js' ]
+                    // }
                 }
             },
             {
