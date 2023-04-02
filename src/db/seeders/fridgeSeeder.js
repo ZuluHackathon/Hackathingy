@@ -1,5 +1,3 @@
-const Fridge  = require('../schemas/fridge');
-
 const fridgeSeeder = async (fridgeArr) => {
   for (let i = 0; i < fridgeArr.length; i++) {
     await Fridge.findOrCreate(
