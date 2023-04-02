@@ -83,4 +83,4 @@ modelSync(true);
 // <-- WON'T DROP TABLES -->
 //modelSync();
 
-module.exports = db;
+module.exports = { db, User, Fridge, Badge };
