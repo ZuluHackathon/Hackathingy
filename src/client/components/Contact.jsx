@@ -1,7 +1,7 @@
 import React from 'react';
 import Index from '../Index';
 import { useState } from 'react-dom';
-import axios from 'axios';
+
 
 // Route in server/index.js that needs to be hit
 // app.post('/send-sms', (req, res) => {
