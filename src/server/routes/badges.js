@@ -28,7 +28,6 @@ const BadgeRouter = Router();
   べべべべべべべべべべ
 */
 
-const Badge = require('../../db/schemas/badge');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*

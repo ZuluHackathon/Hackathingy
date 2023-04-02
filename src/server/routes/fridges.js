@@ -28,7 +28,6 @@ const FridgeRouter = Router();
   べべべべべべべべべべ
 */
 
-const Fridge = require('../../db/schemas/user');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*

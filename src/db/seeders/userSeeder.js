@@ -1,5 +1,3 @@
-const User = require('../schemas/user');
-
 const userSeeder = async (userArr) => {
   for (let i = 0; i < userArr.length; i++) {
     await User.findOrCreate(

@@ -1,4 +1,3 @@
-const Badge = require('../schemas/badge');
 
 const BadgeSeeder = async (badgeArr) => {
   for (let i = 0; i < badgeArr.length; i++) {

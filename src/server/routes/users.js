@@ -28,7 +28,6 @@ const UserRouter = Router();
   べべべべべべべべべべ
 */
 
-const User = require('../../db/schemas/user');
 // import { Model } from 'sequelize'; // ⇠ for advanced queries (Op: ne, etc...)
 
 /*
